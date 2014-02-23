@@ -16,5 +16,12 @@
                                (rainbow-delimiters-mode 1)
                                (eldoc-mode 1)))
 
+(defun stumpwm-pack/eval-buffer () "Eval the current buffer"
+  (interactive)
+  (stumpwm-eval-region (point-min) (point-max)))
+
+(define-key stumpwm-mode-map (kbd "C-c m r") 'stumpwm-eval-region)
+(define-key stumpwm-mode-map (kbd "C-c m b") 'stumpwm-pack/eval-buffer)
+
 ;; Load bindings config
 (live-load-config-file "bindings.el")
