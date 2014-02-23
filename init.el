@@ -1,4 +1,7 @@
-(live-add-pack-lib "stumpwm-mode.el")
+(setq *TEMPORARY-PACKAGE-ARCHIVES* package-archives)
+
+(install-packs '(stumpwm-mode)
+               (add-to-list '*TEMPORARY-PACKAGE-ARCHIVES* '("melpa" . "http://melpa.milkbox.net/packages/") t))
 
 (require 'stumpwm-mode)
 
