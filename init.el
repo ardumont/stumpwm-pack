@@ -11,7 +11,7 @@
 (setq stumpwm-mode-hook)
 (add-hook 'stumpwm-mode-hook (lambda ()
                                (setq major-mode 'lisp-mode)
-                               (lisp-mode-variables)
+                               (lisp-mode-variables t t)
                                (paredit-mode 1)
                                (rainbow-delimiters-mode 1)
                                (eldoc-mode 1)))
