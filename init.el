@@ -26,5 +26,4 @@
 (define-key stumpwm-mode-map (kbd "C-c m r") 'stumpwm-eval-region)
 (define-key stumpwm-mode-map (kbd "C-c m b") 'stumpwm-pack/eval-buffer)
 
-
 ;;; stumpwm-pack.el ends here
