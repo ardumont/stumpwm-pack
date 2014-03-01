@@ -23,5 +23,3 @@
 (define-key stumpwm-mode-map (kbd "C-c m r") 'stumpwm-eval-region)
 (define-key stumpwm-mode-map (kbd "C-c m b") 'stumpwm-pack/eval-buffer)
 
-;; Load bindings config
-(live-load-config-file "bindings.el")
