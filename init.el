@@ -4,10 +4,7 @@
 
 ;;; Code:
 
-(setq *TEMPORARY-PACKAGE-ARCHIVES* package-archives)
-
-(install-packs '(stumpwm-mode)
-               (add-to-list '*TEMPORARY-PACKAGE-ARCHIVES* '("melpa" . "http://melpa.milkbox.net/packages/") t))
+(install-packs '(stumpwm-mode))
 
 (require 'stumpwm-mode)
 (require 'rainbow-delimiters)
