@@ -5,17 +5,16 @@
 ;;; Code:
 
 (install-packs '(stumpwm-mode
-                 smartscan-mode))
+                 smartscan))
 
 (require 'stumpwm-mode)
 (add-to-list 'auto-mode-alist '("\\.stumpwmrc$" . stumpwm-mode))
 
-(require 'smartscan-mode)
-(add-to-list 'auto-mode-alist '("\\.stumpwmrc$" . smartscan-mode))
+(require 'smartscan)
+(add-hook 'stumpwm-mode-hook (lambda () (smartscan-mode)))
 
 (require 'rainbow-delimiters)
 
-(setq stumpwm-mode-hook)
 (add-hook 'stumpwm-mode-hook (lambda ()
                                (setq major-mode 'lisp-mode)
                                (lisp-mode-variables t t)
