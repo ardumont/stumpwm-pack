@@ -11,16 +11,14 @@
 (add-to-list 'auto-mode-alist '("\\.stumpwmrc$" . stumpwm-mode))
 
 (require 'smartscan)
-(add-hook 'stumpwm-mode-hook (lambda () (smartscan-mode)))
-
 (require 'rainbow-delimiters)
 
 (add-hook 'stumpwm-mode-hook (lambda ()
-                               (setq major-mode 'lisp-mode)
-                               (lisp-mode-variables t t)
                                (paredit-mode 1)
                                (rainbow-delimiters-mode 1)
-                               (eldoc-mode 1)))
+                               (eldoc-mode 1)
+                               (smartscan-mode)
+                               (lisp-mode)))
 
 (defun stumpwm-pack/eval-buffer () "Eval the current buffer"
   (interactive)
