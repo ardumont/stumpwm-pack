@@ -1,9 +1,10 @@
-;;; php-pack.el --- Stumpwm
+;;; stumpwm-pack.el --- Stumpwm
 
 ;;; Commentary:
 
 ;;; Code:
 
+(require 'install-packages-pack)
 (install-packs '(stumpwm-mode
                  smartscan))
 
@@ -28,4 +29,5 @@
   (interactive)
   (stumpwm-eval-region (point-min) (point-max)))
 
+(provide 'stumpwm-pack)
 ;;; stumpwm-pack.el ends here
