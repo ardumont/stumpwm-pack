@@ -25,7 +25,8 @@
             (define-key stumpwm-mode-map (kbd "C-c m r") 'stumpwm-eval-region)
             (define-key stumpwm-mode-map (kbd "C-c m b") 'stumpwm-pack/eval-buffer)))
 
-(defun stumpwm-pack/eval-buffer () "Eval the current buffer"
+(defun stumpwm-pack/eval-buffer ()
+  "Eval the current buffer."
   (interactive)
   (stumpwm-eval-region (point-min) (point-max)))
 
