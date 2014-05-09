@@ -14,6 +14,14 @@
 (require 'smartscan)
 (require 'rainbow-delimiters)
 
+(defun stumpwm-pack/find-user-init-file! ()
+  "Find the default user's stumpwmrc file."
+  (interactive)
+  (find-file-other-window "~/.stumpwmrc"))
+
+(global-set-key (kbd "C-c f s") 'stumpwm-pack/find-user-init-file!)
+
+(setq stumpwm-mode-hook)
 (add-hook 'stumpwm-mode-hook
           (lambda ()
             (setq major-mode 'lisp-mode)
