@@ -5,8 +5,8 @@
 ;;; Code:
 
 (require 'install-packages-pack)
-(install-packs '(stumpwm-mode
-                 smartscan))
+(install-packages-pack/install-packs '(stumpwm-mode
+                                       smartscan))
 
 (require 'stumpwm-mode)
 (add-to-list 'auto-mode-alist '("\\.stumpwmrc$" . stumpwm-mode))
